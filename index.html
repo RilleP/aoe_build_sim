@@ -14,7 +14,7 @@
   <title>aoebuildsim</title>
   <link rel="manifest" href="/manifest.json">
 </head>
-<body>
+<body ondragover="onDragOver(event);">
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
@@ -26,12 +26,10 @@
       });
     }
   </script>
-  <script src="file_saver.js"> 
-  </script>
   
   <script>
-  function webSaveAs(blob, name) {
-    saveAs(blob, name);
+  function onDragOver(event) {
+    event.preventDefault();
   }
   </script>
   <script src="main.dart.js" type="application/javascript"></script>
